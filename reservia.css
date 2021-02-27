@@ -1,7 +1,7 @@
 /* Définition des polices personnalisées */
 @font-face {
   font-family: "Raleway";
-  src: url("Raleway_2/static/Raleway-Light.ttf") format("truetype");
+  src: url("Raleway/static/Raleway-Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -452,4 +452,118 @@ footer p {
 h3 {
   font-size: 1.1em;
   font-weight: bold;
+}
+
+/* @média (type) carateristique */
+
+/* Tablette */
+
+@media all and (min-width: 481px) and (max-width: 1024px) {
+  #section2 {
+    border: 1px solid black;
+    height: 1200px;
+  }
+
+  #Activités {
+    border: 1px solid black;
+    height: 1300px;
+  }
+}
+
+/* Mobile */
+/*
+@media all and (max-device-width: 480px) {}
+@media screen and (max-width: 767px){}
+}
+*/
+
+@media all and (max-width: 480px) {
+  /* Header */
+
+  header {
+    display: none;
+    border: 1px solid black;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  /* Navigation */
+  ul {
+    border: 1px solid black;
+  }
+
+  li a {
+    padding-bottom: 15px;
+  }
+
+  li a:hover {
+    border-top: 0px;
+    border-bottom: 3px solid #0065fc;
+  }
+
+  /* Recherche */
+  section[id="section1"] {
+    border: 1px solid black;
+  }
+
+  /* Filtres */
+
+  /* Hébergements */
+  #section2 {
+    border: 1px solid black;
+    margin-bottom: 650px;
+  }
+
+  section[id="Hébergements"] {
+    border: 1px solid black;
+    background-color: white;
+    margin-top: 30px;
+  }
+
+  #engloble_cartes_hébergements {
+    height: 900px;
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  article[class*="carte"] {
+    width: 300px;
+    height: 150px;
+  }
+
+  /* Aside */
+  aside {
+    border: 1px solid black;
+    height: 100%;
+  }
+
+  /* Activités */
+  #Activités {
+    border: 1px solid black;
+    margin-bottom: 50px;
+  }
+
+  #titre_image {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Footer */
+  footer {
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .lien:nth-child(2) {
+    margin-left: 30px;
+  }
+
+  .lien:nth-child(3) {
+    margin-left: 30px;
+  }
 }
