@@ -8,40 +8,60 @@
 
 /* Elements principaux de la page */
 body {
+  border: 1px solid black;
   background-color: #ffffff;
   font-family: "Raleway", sans-serif;
-  margin-left: 0px;
-  margin-right: 0px;
+}
+
+#bloc_page {
+  border: 1px solid violet;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 1500px;
 }
 
 /* Header */
-#conteneur {
-  margin-left: 30px;
-  margin-right: 30px;
+header {
+  border: 1px solid black;
+  /*margin-left: 30px;
+margin-bottom: 10px;
+margin-right: 30px;*/
   display: flex;
   justify-content: space-between;
 }
 
 header img {
+  border: 1px solid black;
   width: 70px;
   height: 50px;
 }
 
 /* Navigation */
+
+nav {
+  border: 1px solid black;
+}
+
 nav ul {
+  border: 1px solid violet;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 nav li {
+  border: 1px solid black;
   margin-right: 40px;
   font-size: 1em;
+  font-weight: bold;
 }
 
 li a {
   text-decoration: none;
   color: black;
-  padding-top: 15px;
+  padding: 15px 30px 15px 30px;
+  margin: 0px;
 }
 
 li a:hover {
@@ -51,16 +71,15 @@ li a:hover {
 
 li:last-child {
   color: #0065fc;
-  font-weight: bold;
   cursor: pointer;
 }
 
-/* Main */
-
 /* Recherche */
 section[id="section1"] {
-  margin-left: 30px;
-  margin-right: 30px;
+  border: 1px solid black;
+  /*margin-left: 30px;
+margin-right: 30px;
+margin-bottom: 10px;*/
 }
 
 section[id="section1"] h1 {
@@ -76,11 +95,12 @@ form {
   border-collapse: collapse;
 }
 
-form i {
+.fa-map-marker-alt {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #f2f2f2;
   padding: 10px 10px 10px 10px;
   border-radius: 10px 0px 0px 10px;
+  font-size: 1em;
 }
 
 input {
@@ -88,7 +108,6 @@ input {
   font-weight: bold;
   font-size: 1em;
   padding-left: 10px;
-  font-size: 1em;
 }
 
 form button {
@@ -96,28 +115,41 @@ form button {
   background-color: #0065fc;
   color: white;
   border-radius: 0px 10px 10px 0px;
+  font-size: 1em;
+}
+
+button:last-child {
+  display: none;
 }
 
 /* Filtres */
 #Filtres {
-  width: 75%;
+  border: 1px solid black;
   display: flex;
-  flex-wrap: wrap;
-  margin-top: 15px;
-  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 div[id="Filtres"] h1 {
+  border: 1px solid black;
   font-size: 1em;
   font-weight: bold;
+  margin-right: 15px;
+}
+
+#icône_filtres {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 65%;
+  flex-wrap: wrap;
 }
 
 .boite {
   display: flex;
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  margin-right: 30px;
   border-radius: 25px;
   padding: 5px 10px 5px 5px;
   font-weight: bold;
@@ -176,12 +208,13 @@ div [id="information"] p {
 
 /* Hébergements */
 #section2 {
-  margin-left: 30px;
-  margin-right: 30px;
+  border: 1px solid black;
+  /*margin-left: 30px;
+margin-right: 30px;
+margin-bottom: 40px;*/
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap-reverse;
-  justify-content: space-around;
-  margin-bottom: 40px;
 }
 /* Section2 engloble la section hébergements et l'aside populaires*/
 .section2_hébergements_populaires {
@@ -196,7 +229,6 @@ div [id="information"] p {
 
 .section2_hébergements_populaires:nth-child(2) {
   flex: 1.2;
-  position: relative;
   padding: 10px;
 }
 
@@ -254,10 +286,11 @@ h2 {
 .carte1 {
   display: flex;
   flex-direction: column;
+  width: 240px;
+  height: auto;
 }
 
 article[class="carte1"] img {
-  width: 230px;
   height: 110px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -348,7 +381,8 @@ aside p {
 
 /* Activités */
 #Activités {
-  margin: 0px 30px 30px 30px;
+  border: 1px solid black;
+  /*margin: 0px 30px 30px 30px;*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -424,6 +458,7 @@ article[class="carte6"] img {
 
 /* Footer */
 footer {
+  border: 1px solid black;
   display: flex;
   background-color: #f2f2f2;
   height: 180px;
@@ -459,6 +494,10 @@ h3 {
 /* Tablette */
 
 @media all and (min-width: 481px) and (max-width: 1024px) {
+  body {
+    background-color: gray;
+  }
+
   #section2 {
     border: 1px solid black;
     height: 1200px;
@@ -471,21 +510,17 @@ h3 {
 }
 
 /* Mobile */
-/*
-@media all and (max-device-width: 480px) {}
-@media screen and (max-width: 767px){}
-}
-*/
-
 @media all and (max-width: 480px) {
-  /* Header */
+  #bloc_page {
+    width: auto;
+  }
 
+  /* Header */
   header {
-    display: none;
     border: 1px solid black;
-    width: 100%;
-    margin-left: 0px;
+    width: auto;
     margin-right: 0px;
+    margin-left: 0px;
   }
 
   /* Navigation */
@@ -493,8 +528,8 @@ h3 {
     border: 1px solid black;
   }
 
-  li a {
-    padding-bottom: 15px;
+  a {
+    border-bottom: 3px solid grey;
   }
 
   li a:hover {
@@ -507,7 +542,37 @@ h3 {
     border: 1px solid black;
   }
 
+  button:last-child {
+    display: initial;
+    border-radius: 10px;
+    margin-left: -15px;
+    width: 40px;
+    height: 40px;
+  }
+
+  #sans_icône {
+    display: none;
+  }
+
   /* Filtres */
+  #Filtres {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  div[id="Filtres"] h1 {
+    margin-right: 0px;
+  }
+
+  #icône_filtres {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
 
   /* Hébergements */
   #section2 {
@@ -515,20 +580,20 @@ h3 {
     margin-bottom: 650px;
   }
 
-  section[id="Hébergements"] {
+  .section2_hébergements_populaires:nth-child(1) {
     border: 1px solid black;
     background-color: white;
     margin-top: 30px;
+    margin-right: 0px;
   }
 
   #engloble_cartes_hébergements {
     height: 900px;
     width: 100%;
-    margin-right: 0px;
   }
 
   article[class*="carte"] {
-    width: 300px;
+    width: auto;
     height: 150px;
   }
 
