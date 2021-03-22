@@ -339,7 +339,7 @@ section[id="Hébergements"] p:last-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 6px 30px 10px 30px;
+  margin: 20px 30px 10px 30px;
 }
 
 aside h1 {
@@ -354,11 +354,12 @@ aside h1 {
 }
 
 #tickets_images {
-  margin: 0px 30px 10px 30px;
+  margin: 10px 30px 10px 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 
 .ticket2 {
