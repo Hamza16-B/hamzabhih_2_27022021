@@ -18,7 +18,6 @@ body {
 }
 
 /* Header */
-/* revoir le header*/
 header {
   display: flex;
   justify-content: space-between;
@@ -46,19 +45,13 @@ nav ul {
 }
 
 nav li {
-  border: 1px solid black;
   font-size: 1em;
   font-weight: bold;
-  width: 100%;
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
   margin: 0%;
-}
-
-li a {
-  text-decoration: none;
-  color: black;
+  width: 150px;
 }
 
 li:last-child {
@@ -66,8 +59,17 @@ li:last-child {
   cursor: pointer;
 }
 
+li a {
+  text-decoration: none;
+  color: black;
+}
+
 .trait_bleu:hover {
   border-top: 3px solid #0065fc;
+}
+
+li a:hover {
+  color: #0065fc;
 }
 
 /* Recherche */
@@ -204,7 +206,6 @@ div[id="information"] p {
 /* Hébergements */
 
 #section2 {
-  border: 1px solid black;
   margin: 30px 30px 0px 30px;
   display: flex;
   justify-content: space-between;
@@ -213,7 +214,6 @@ div[id="information"] p {
 /* Section2 Hébergements et Les plus Populaires*/
 
 .section2_hébergements_populaires {
-  border: 1px solid black;
   background-color: #f2f2f2;
   border-radius: 20px;
 }
@@ -243,7 +243,6 @@ section[id="Hébergements"] h1 {
 }
 
 #engloble_cartes_hébergements {
-  border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -264,7 +263,8 @@ article img {
   object-fit: cover;
 }
 
-a {
+div[id="section2"] a,
+section[id="Activités"] a {
   text-decoration: none;
   color: black;
 }
@@ -290,13 +290,11 @@ h2 {
 /* Carte hébergements */
 
 .carte1 {
-  border: 1px solid violet;
   width: 30%;
   height: 190px;
 }
 
 article[class="carte1"] a {
-  border: 1px solid black;
   height: 100%;
   width: 100%;
   display: flex;
@@ -324,12 +322,10 @@ em {
 }
 
 .étoiles_hébergements {
-  border: 1px solid black;
   margin: 5px 0px 5px 10px;
 }
 
 section[id="Hébergements"] p:last-child {
-  border: 1px solid black;
   font-weight: bold;
   font-size: 1.2em;
   margin: 20px 30px 20px 30px;
@@ -357,7 +353,6 @@ aside h1 {
 }
 
 #tickets_images {
-  border: 1px solid black;
   margin: 10px 20px 10px 20px;
   display: flex;
   flex-direction: column;
@@ -366,7 +361,6 @@ aside h1 {
 }
 
 .ticket2 {
-  border: 1px solid black;
   width: 100%;
   height: 140px;
   margin-bottom: 10px;
@@ -393,30 +387,25 @@ article[class="ticket2"] img {
   flex-direction: column;
   justify-content: space-around;
   height: 90%;
-  border: 1px solid black;
   width: 70%;
 }
 
 aside h2 {
-  border: 1px solid black;
   width: 100%;
 }
 
 aside p {
-  border: 1px solid black;
   margin-top: -20px;
   width: 100%;
 }
 
 .icons_aside {
   width: 100%;
-  border: 1px solid black;
 }
 
 /* Activités */
 
 #Activités {
-  border: 1px solid black;
   margin: 30px 30px 30px 30px;
   display: flex;
   flex-direction: column;
@@ -430,14 +419,12 @@ section[id="Activités"] h1 {
 }
 
 #titre_image {
-  border: 1px solid black;
   display: flex;
   justify-content: space-between;
 }
 
 .deux_cartes {
   width: 22%;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -454,14 +441,12 @@ section[id="Activités"] h2 {
 }
 
 div[id="titre_image"] a {
-  border: 1px solid violet;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
 .carte3 {
-  border: 1px solid black;
   width: 22%;
 }
 
@@ -470,7 +455,6 @@ article[class="carte3"] img {
 }
 
 .carte4 {
-  border: 1px solid black;
   width: 100%;
 }
 
@@ -479,7 +463,6 @@ article[class="carte4"] img {
 }
 
 .carte5 {
-  border: 1px solid black;
   width: 100%;
 }
 
@@ -488,7 +471,6 @@ article[class="carte5"] img {
 }
 
 .carte6 {
-  border: 1px solid black;
   width: 100%;
 }
 
@@ -525,7 +507,7 @@ footer p {
   font-size: 0.9em;
 }
 
-@media all and (min-width: 768px) and (max-width: 1000px) {
+@media all and (min-width: 768px) and (max-width: 1000.98px) {
   /* Filtres */
 
   #icône_filtres {
@@ -628,7 +610,16 @@ footer p {
 @media all and (min-width: 481px) and (max-width: 767.98px) {
   /* Header */
 
-  /* faire le header*/
+  header {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  /* Navigation */
+
+  nav li {
+    width: 120px;
+  }
 
   /* Recherche */
 
@@ -637,7 +628,6 @@ footer p {
   }
 
   section[id="section1"] {
-    border: 1px solid black;
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -645,7 +635,6 @@ footer p {
   /* Filtres */
 
   #Filtres {
-    border: 1px solid black;
     margin-top: 10px;
     align-items: flex-start;
     flex-direction: column;
@@ -656,7 +645,6 @@ footer p {
   }
 
   #icône_filtres {
-    border: 1px solid black;
     align-items: flex-start;
     flex-direction: column;
     position: relative;
@@ -822,12 +810,12 @@ footer p {
 
   #logo_reservia {
     position: absolute;
-    top: 5px;
+    top: 0px;
     left: 10px;
   }
 
   header img {
-    width: 120px;
+    width: 115px;
   }
 
   /* Navigation */
@@ -836,37 +824,37 @@ footer p {
     position: absolute;
     bottom: 0px;
     left: 0px;
-    width: 185px;
-    z-index: 2;
+    width: 50%;
+    text-align: center;
   }
 
   #puce2 {
     position: absolute;
     bottom: 0px;
     right: 0px;
-    width: 185px;
-    z-index: 1;
+    width: 50%;
+    text-align: center;
   }
 
   li:last-child {
     position: absolute;
     top: 0px;
     right: 0px;
+    width: 35%;
   }
 
   .trait_bleu {
-    border-bottom: 5px solid #d9d9d9;
+    border-bottom: 3px solid #d9d9d9;
   }
 
   .trait_bleu:hover {
     border-top: none;
-    border-bottom: 5px solid #0065fc;
+    border-bottom: 3px solid #0065fc;
   }
 
   /* Recherche */
 
   section[id="section1"] {
-    border: 1px solid black;
     margin: 0px 20px 20px 20px;
   }
 
@@ -901,7 +889,6 @@ footer p {
   }
 
   #icône_filtres {
-    border: 1px solid black;
     flex-direction: column;
     align-items: flex-start;
     position: relative;
@@ -960,6 +947,12 @@ footer p {
     width: 100%;
   }
 
+  /* Pour toute les cartes */
+  h2 {
+    font-size: 1em;
+    font-weight: bold;
+  }
+
   /* Section Hébergements à Marseille*/
 
   .section2_hébergements_populaires:nth-child(1) {
@@ -977,11 +970,11 @@ footer p {
     margin-left: 20px;
     margin-right: 20px;
     max-width: 100%;
-    min-width: auto;
   }
 
   .carte1 {
     width: 100%;
+    margin-bottom: 20px;
   }
 
   section[id="Hébergements"] p:last-child {
